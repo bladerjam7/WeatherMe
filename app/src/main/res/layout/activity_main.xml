@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beach_background"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_current_temp"
+        style="@style/CurrentNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="69"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="69" />
+
+    <TextView
+        android:id="@+id/degree_icon"
+        style="@style/CurrentNumberTextDegreeSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_current_temp"
+        app:layout_constraintTop_toTopOf="@+id/tv_current_temp"
+        android:text="o" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        style="@style/CityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_current_temp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_current_temp"
+        app:layout_constraintStart_toStartOf="@+id/tv_current_temp"
+        tools:text="Atlanta" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3515732" />
+
+    <ImageView
+        android:id="@+id/iv_weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_current_temp"
+        app:layout_constraintStart_toEndOf="@+id/tv_current_temp"
+        app:layout_constraintTop_toTopOf="@+id/tv_current_temp"
+        tools:srcCompat="@drawable/weather_icon_holder" />
+
+    <TextView
+        android:id="@+id/tv_updated"
+        style="@style/UpdateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Updated"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_update_date" />
+
+    <TextView
+        android:id="@+id/tv_update_date"
+        style="@style/UpdateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="1-22 8:15am" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="16dp"
+        android:layout_height="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/tv_updated"
+        app:layout_constraintTop_toTopOf="@+id/tv_updated"
+        app:srcCompat="@drawable/ic_refresh"
+        />
+
+
+
+    <FrameLayout
+        android:id="@+id/fl_list_weather"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    tools:background="#020101">
+
+    <TextView
+        android:id="@+id/tv_day_of_week"
+        style="@style/DayOfTheWeekText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="#020101"
+        tools:text="Sunday" />
+
+    <TextView
+        android:id="@+id/tv_day_high"
+        style="@style/DefaultColorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_day_weather_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_day_weather_icon"
+        tools:text="75" />
+
+    <TextView
+        android:id="@+id/tv_day_low"
+        style="@style/DefaultColorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="23"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_day_weather_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iv_day_weather_icon" />
+
+    <ImageView
+        android:id="@+id/iv_day_weather_icon"
+        android:layout_width="49dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/weather_icon_holder" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/ChangeOfRainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rain %"
+        app:layout_constraintStart_toStartOf="@+id/tv_day_of_week"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <TextView
+        android:id="@+id/tv_percent_rain"
+        style="@style/ChangeOfRainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:text="40" />
+</androidx.constraintlayout.widget.ConstraintLayout>
